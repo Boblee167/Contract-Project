@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using ContractManager.Models;
+using ContractManager.DAL;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace ContractManager
 {
@@ -64,5 +66,41 @@ namespace ContractManager
             //    ClientSecret = ""
             //});
         }
+
+        private void createRolesandUsers()
+        {
+            ContractManagerContext context = new ContractManagerContext();
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+
+            // In Startup I am creating first Admin Role and creating a default Admin User    
+            if (!roleManager.RoleExists("Admin"))
+            {
+                // first we create Admin role   
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Admin";
+                roleManager.Create(role);
+
+                //Here we create a Admin super user who will maintain the website                  
+
+                var user = new ApplicationUser();
+                user.UserName = "admin@Welfare.ie";
+                user.Email = "admin@ead.com";
+
+                string userPWD = "Password-123";
+
+                var chkUser = UserManager.Create(user, userPWD);
+
+                //Add default User to Role Admin   
+                if (chkUser.Succeeded)
+                {
+                    var result1 = UserManager.AddToRole(user.Id, "Admin");
+                }
+            }
+        }
+
     }
+    
 }
