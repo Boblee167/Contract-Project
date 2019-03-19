@@ -1,0 +1,98 @@
+﻿@model ContractManager.Models.ContractDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContractDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier.SupplierNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier.SupplierNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractFinishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractFinishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractExtensionsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractExtensionsAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DurationContactExtension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DurationContactExtension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Servicetype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Servicetype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VatRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VatRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceUpdatedate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceUpdatedate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Contract_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

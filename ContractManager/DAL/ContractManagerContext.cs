@@ -1,11 +1,8 @@
-﻿using ContractManager.Models;
+﻿
+/*using ContractManager.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Web;
 
 namespace ContractManager.DAL
 {
@@ -15,10 +12,10 @@ namespace ContractManager.DAL
         {
         }
 
-        public DbSet<Supplier> CMSupplier { get; set; }
-        public DbSet<Property> CMProperty { get; set; }
-        public DbSet<ContractDetails> CMContract { get; set; }
-        public DbSet<ContractHours> CMCleaningHours { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
+        public DbSet<Property> Property { get; set; }
+        public DbSet<ContractDetails> ContractDetails { get; set; }
+        public DbSet<ContractHours> ContractHours { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,4 +23,5 @@ namespace ContractManager.DAL
         }
     }
 }
+*/
 

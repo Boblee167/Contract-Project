@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace ContractManager.Controllers
 {
@@ -13,9 +9,9 @@ namespace ContractManager.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult FAQ()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "FAQ page for users";
 
             return View();
         }
@@ -28,3 +24,4 @@ namespace ContractManager.Controllers
         }
     }
 }
+

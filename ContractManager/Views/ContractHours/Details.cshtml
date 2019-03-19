@@ -1,0 +1,74 @@
+﻿@model ContractManager.Models.ContractHours
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ContractHours</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetails.PriceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetails.PriceDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Prop_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property.Prop_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weekday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weekday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DailyHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursUpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursUpdatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeeklyHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeeklyHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvgMonthlyHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvgMonthlyHours)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Transaction_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

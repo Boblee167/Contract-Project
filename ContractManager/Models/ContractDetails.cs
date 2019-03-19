@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace ContractManager.Models
 {
-    public class ContractDetails
-    {
-        public enum Service
+    public enum Service
         {
             [Display(Name = "Security")] Security,
             [Display(Name = "Waste")] Waste,
@@ -35,8 +30,11 @@ namespace ContractManager.Models
             [Display(Name = "Photocopying Paper")] Paper,
             [Display(Name = "Stationery")] Stationery,
             [Display(Name = "Envelopes")] Envelopes,
-        }
+    }
 
+
+    public class ContractDetails
+    {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Contract_ID { get; set; }
@@ -74,16 +72,6 @@ namespace ContractManager.Models
         
         //Navigation Property
         public virtual Supplier Supplier { get; set; }
-
-        
-
-
-
-
-
-
-
-
 
     }
 }

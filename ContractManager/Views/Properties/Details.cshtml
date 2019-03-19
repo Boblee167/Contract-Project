@@ -1,0 +1,114 @@
+﻿@model ContractManager.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Prop_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prop_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prop_County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prop_County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost_Centre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost_Centre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPW_Building_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPW_Building_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SquareMetre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SquareMetre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaffCapacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarParkSpots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarParkSpots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOpened)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOpened)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateClosed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateClosed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lease_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lease_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Property_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

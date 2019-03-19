@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ContractManager.Models.Property>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Prop_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prop_County)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost_Centre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OPW_Building_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SquareMetre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarParkSpots)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOpened)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateClosed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lease_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prop_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prop_County)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost_Centre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OPW_Building_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SquareMetre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarParkSpots)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOpened)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateClosed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lease_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Property_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Property_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Property_ID })
+        </td>
+    </tr>
+}
+
+</table>

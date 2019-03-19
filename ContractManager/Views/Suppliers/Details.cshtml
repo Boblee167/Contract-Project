@@ -1,0 +1,66 @@
+﻿@model ContractManager.Models.Supplier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierCounty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierCounty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierEMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierEMail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Supplier_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

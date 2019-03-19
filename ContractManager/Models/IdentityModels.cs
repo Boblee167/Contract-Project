@@ -1,8 +1,8 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace ContractManager.Models
 {
@@ -29,5 +29,10 @@ namespace ContractManager.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Supplier> Supplier { get; set; }
+        public DbSet<Property> Property { get; set; }
+        public DbSet<ContractDetails> ContractDetails { get; set; }
+        public DbSet<ContractHours> ContractHours { get; set; }
     }
 }

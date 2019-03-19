@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace ContractManager.Models
 {
@@ -36,7 +33,7 @@ namespace ContractManager.Models
             
         // Navigation Properties
 
-        public List<ContractDetails> ContractDetails { get; set; }
+        public virtual List<ContractDetails> ContractDetails { get; set; }
 
 
     }

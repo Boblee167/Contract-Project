@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace ContractManager.Models
 {
-        public enum Property_Team
+    public enum Property_Team
         {
             [Display(Name = "Team North")] Team_North,
             [Display(Name = "Team South")] Team_South
         }
-        public enum Property_Type
+
+    public enum Property_Type
         {
             [Display(Name = "DEASP Office")] DEASP,
             [Display(Name = "Branch Office")] Branch_Office,
@@ -23,7 +22,7 @@ namespace ContractManager.Models
     public class Property
         {
         
-             [Key]
+            [Key]
             [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
             public int Property_ID { get; set; }
                  
@@ -63,7 +62,7 @@ namespace ContractManager.Models
 
         // Navigation Properties
 
-        public List<ContractHours> ContractHours { get; set; }
+        public virtual List<ContractHours> ContractHours { get; set; }
 
     }
 }

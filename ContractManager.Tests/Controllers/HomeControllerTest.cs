@@ -26,13 +26,13 @@ namespace ContractManager.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void FAQ()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.FAQ() as ViewResult;
 
             // Assert
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);

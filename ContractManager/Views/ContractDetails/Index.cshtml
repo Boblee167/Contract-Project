@@ -1,0 +1,87 @@
+﻿@model IEnumerable<ContractManager.Models.ContractDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier.SupplierNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractFinishDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractExtensionsAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DurationContactExtension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Servicetype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VatRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceUpdatedate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier.SupplierNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractFinishDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractExtensionsAvailable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DurationContactExtension)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Servicetype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VatRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceUpdatedate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Contract_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Contract_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Contract_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -67,9 +67,9 @@ namespace ContractManager
             //});
         }
 
-        private void createRolesandUsers()
+        private void CreateRolesandUsers()
         {
-            ContractManagerContext context = new ContractManagerContext();
+            ApplicationDbContext context = new ApplicationDbContext();
 
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
@@ -79,15 +79,19 @@ namespace ContractManager
             if (!roleManager.RoleExists("Admin"))
             {
                 // first we create Admin role   
-                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Admin";
+                var role = new IdentityRole
+                {
+                    Name = "Admin"
+                };
                 roleManager.Create(role);
 
                 //Here we create a Admin super user who will maintain the website                  
 
-                var user = new ApplicationUser();
-                user.UserName = "admin@Welfare.ie";
-                user.Email = "admin@ead.com";
+                var user = new ApplicationUser
+                {
+                    UserName = "admin@Welfare.ie",
+                    Email = "admin@ead.com"
+                };
 
                 string userPWD = "Password-123";
 

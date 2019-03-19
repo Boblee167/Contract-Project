@@ -4051,7 +4051,7 @@ input[type="button"].btn-block {
 }
 
 .nav {
-  display: -ms-flexbox;
+  display:inline-block;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -4061,7 +4061,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 1rem;
 }
 
@@ -10005,7 +10005,7 @@ a.text-dark:hover, a.text-dark:focus {
     min-width: 992px !important;
   }
   .navbar {
-    display: none;
+    display: inline-block;
   }
   .badge {
     border: 1px solid #000;

@@ -1,0 +1,80 @@
+﻿@model ContractManager.Models.ContractHours
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ContractHours</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetails.PriceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetails.PriceDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Prop_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property.Prop_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weekday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weekday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DailyHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursUpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursUpdatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeeklyHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeeklyHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvgMonthlyHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvgMonthlyHours)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
