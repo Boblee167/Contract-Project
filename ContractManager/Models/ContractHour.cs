@@ -7,7 +7,7 @@ namespace ContractManager.Models
     public enum WeekDay {Mon,Tue,Wed,Thu,Fri,Sat,Sun}
         
 
-    public class ContractHours
+    public class ContractHour
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -34,7 +34,7 @@ namespace ContractManager.Models
 
         // Navigation Properties
         public virtual Property Property { get; set; }
-        public virtual ContractDetails ContractDetails { get; set; }
+        public virtual ContractDetail ContractDetails { get; set; }
     }
 
     

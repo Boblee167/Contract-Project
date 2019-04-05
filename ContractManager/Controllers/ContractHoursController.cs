@@ -29,7 +29,7 @@ namespace ContractManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContractHours contractHours = await db.ContractHours.FindAsync(id);
+            ContractHour contractHours = await db.ContractHours.FindAsync(id);
             if (contractHours == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace ContractManager.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Transaction_ID,Property_ID,Contract_ID,Weekday,DailyHours,HoursUpdatedDate,WeeklyHours,AvgMonthlyHours")] ContractHours contractHours)
+        public async Task<ActionResult> Create([Bind(Include = "Transaction_ID,Property_ID,Contract_ID,Weekday,DailyHours,HoursUpdatedDate,WeeklyHours,AvgMonthlyHours")] ContractHour contractHours)
         {
             if (ModelState.IsValid)
             {
@@ -71,7 +71,7 @@ namespace ContractManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContractHours contractHours = await db.ContractHours.FindAsync(id);
+            ContractHour contractHours = await db.ContractHours.FindAsync(id);
             if (contractHours == null)
             {
                 return HttpNotFound();
@@ -86,7 +86,7 @@ namespace ContractManager.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Transaction_ID,Property_ID,Contract_ID,Weekday,DailyHours,HoursUpdatedDate,WeeklyHours,AvgMonthlyHours")] ContractHours contractHours)
+        public async Task<ActionResult> Edit([Bind(Include = "Transaction_ID,Property_ID,Contract_ID,Weekday,DailyHours,HoursUpdatedDate,WeeklyHours,AvgMonthlyHours")] ContractHour contractHours)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +106,7 @@ namespace ContractManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContractHours contractHours = await db.ContractHours.FindAsync(id);
+            ContractHour contractHours = await db.ContractHours.FindAsync(id);
             if (contractHours == null)
             {
                 return HttpNotFound();
@@ -119,7 +119,7 @@ namespace ContractManager.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            ContractHours contractHours = await db.ContractHours.FindAsync(id);
+            ContractHour contractHours = await db.ContractHours.FindAsync(id);
             db.ContractHours.Remove(contractHours);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

@@ -32,7 +32,8 @@ namespace ContractManager.Models
 
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<Property> Property { get; set; }
-        public DbSet<ContractDetails> ContractDetails { get; set; }
-        public DbSet<ContractHours> ContractHours { get; set; }
+        public DbSet<ContractDetail> ContractDetails { get; set; }
+        public DbSet<ContractHour> ContractHours { get; set; }
     }
 }
+

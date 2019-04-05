@@ -62,7 +62,7 @@ namespace ContractManager.Models
 
         // Navigation Properties
 
-        public virtual List<ContractHours> ContractHours { get; set; }
+        public List<ContractHour> ContractHour { get; set; }
 
     }
 }

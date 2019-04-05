@@ -179,7 +179,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PropertiesController.cs" />
     <Compile Include="Controllers\SuppliersController.cs" />
-    <Compile Include="DAL\ContractManagerContext.cs" />
+    <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\ContractManagerInitalisater.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -190,8 +190,8 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ContractHours.cs" />
-    <Compile Include="Models\ContractDetails.cs" />
+    <Compile Include="Models\ContractHour.cs" />
+    <Compile Include="Models\ContractDetail.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Property.cs" />

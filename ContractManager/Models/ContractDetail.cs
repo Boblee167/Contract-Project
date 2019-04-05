@@ -33,7 +33,7 @@ namespace ContractManager.Models
     }
 
 
-    public class ContractDetails
+    public class ContractDetail
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

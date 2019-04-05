@@ -29,7 +29,7 @@ namespace ContractManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContractDetails contractDetails = await db.ContractDetails.FindAsync(id);
+            ContractDetail contractDetails = await db.ContractDetails.FindAsync(id);
             if (contractDetails == null)
             {
                 return HttpNotFound();
@@ -49,7 +49,7 @@ namespace ContractManager.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Contract_ID,ContractStartDate,ContractFinishDate,ContractExtensionsAvailable,DurationContactExtension,Servicetype,PriceDescription,Price,VatRate,PriceUpdatedate,Supplier_ID")] ContractDetails contractDetails)
+        public async Task<ActionResult> Create([Bind(Include = "Contract_ID,ContractStartDate,ContractFinishDate,ContractExtensionsAvailable,DurationContactExtension,Servicetype,PriceDescription,Price,VatRate,PriceUpdatedate,Supplier_ID")] ContractDetail contractDetails)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace ContractManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContractDetails contractDetails = await db.ContractDetails.FindAsync(id);
+            ContractDetail contractDetails = await db.ContractDetails.FindAsync(id);
             if (contractDetails == null)
             {
                 return HttpNotFound();
@@ -83,7 +83,7 @@ namespace ContractManager.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Contract_ID,ContractStartDate,ContractFinishDate,ContractExtensionsAvailable,DurationContactExtension,Servicetype,PriceDescription,Price,VatRate,PriceUpdatedate,Supplier_ID")] ContractDetails contractDetails)
+        public async Task<ActionResult> Edit([Bind(Include = "Contract_ID,ContractStartDate,ContractFinishDate,ContractExtensionsAvailable,DurationContactExtension,Servicetype,PriceDescription,Price,VatRate,PriceUpdatedate,Supplier_ID")] ContractDetail contractDetails)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace ContractManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContractDetails contractDetails = await db.ContractDetails.FindAsync(id);
+            ContractDetail contractDetails = await db.ContractDetails.FindAsync(id);
             if (contractDetails == null)
             {
                 return HttpNotFound();
@@ -115,7 +115,7 @@ namespace ContractManager.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            ContractDetails contractDetails = await db.ContractDetails.FindAsync(id);
+            ContractDetail contractDetails = await db.ContractDetails.FindAsync(id);
             db.ContractDetails.Remove(contractDetails);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

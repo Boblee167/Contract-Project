@@ -29,12 +29,11 @@ namespace ContractManager.Models
         [Required]
         [EmailAddress]
         public string SupplierEMail { get; set; }
-            
-            
+
+
         // Navigation Properties
 
-        public virtual List<ContractDetails> ContractDetails { get; set; }
-
+        public List<ContractDetail> ContractDetail { get; set; }
 
     }
 }
