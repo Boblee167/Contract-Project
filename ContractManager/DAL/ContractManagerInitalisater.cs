@@ -417,7 +417,7 @@ new ContractDetail{Supplier_ID=    23  ,ContractStartDate = new DateTime(  30,05
 new ContractDetail{Supplier_ID=    24  ,ContractStartDate = new DateTime(  31,01,2016  ),ContractFinishDate= new DateTime( 31,01,2020  ),Servicetype=Service.  Envelopes   ,PriceDescription = "Hourly Price"  ,Price =    0.00    ,VatRate=   0.135   ,PriceUpdatedate=new DateTime (01/01/2019)  },
             };
 
-            var CleaningHours = new List<ContractHour>
+           /* var CleaningHours = new List<ContractHour>
             {
   new ContractHour{Contract_ID=1   ,Property_ID=   1   ,Weekday=WeekDay.   Mon ,DailyHours =   11.5    ,HoursUpdatedDate = new DateTime (  01,01,2019  ), },
  new ContractHour{Contract_ID= 1   ,Property_ID=   1   ,Weekday=WeekDay.   Tue ,DailyHours =   11.5    ,HoursUpdatedDate = new DateTime (  01,01,2019  ), },
@@ -531,7 +531,7 @@ new ContractDetail{Supplier_ID=    24  ,ContractStartDate = new DateTime(  31,01
  new ContractHour{Contract_ID= 3   ,Property_ID=   8   ,Weekday=WeekDay.   Fri ,DailyHours =   0   ,HoursUpdatedDate = new DateTime (  01,01,2019  ), },
  new ContractHour{Contract_ID= 3   ,Property_ID=   8   ,Weekday=WeekDay.   Sat ,DailyHours =   0   ,HoursUpdatedDate = new DateTime (  01,01,2019  ), },
  new ContractHour{Contract_ID= 3   ,Property_ID=   8   ,Weekday=WeekDay.   Sun ,DailyHours =   0   ,HoursUpdatedDate = new DateTime (  01,01,2019  ), },
-             };
+             };*/
         }
     }
 }

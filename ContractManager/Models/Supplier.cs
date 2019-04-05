@@ -33,7 +33,7 @@ namespace ContractManager.Models
 
         // Navigation Properties
 
-        public List<ContractDetail> ContractDetail { get; set; }
+        public virtual List<ContractDetail> ContractDetail { get; set; }
 
     }
 }
