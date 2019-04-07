@@ -20,6 +20,12 @@ namespace ContractManager.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Supplier> Supplier { get; set; }
+        public DbSet<Property> Property { get; set; }
+        public DbSet<ContractDetail> ContractDetails { get; set; }
+        public DbSet<ContractHour> ContractHours { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -29,11 +35,7 @@ namespace ContractManager.Models
         {
             return new ApplicationDbContext();
         }
-
-        public DbSet<Supplier> Supplier { get; set; }
-        public DbSet<Property> Property { get; set; }
-        public DbSet<ContractDetail> ContractDetails { get; set; }
-        public DbSet<ContractHour> ContractHours { get; set; }
+        
     }
 }
 

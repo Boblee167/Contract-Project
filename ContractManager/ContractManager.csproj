@@ -318,8 +318,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Property\" />
-    <Folder Include="Views\Supplier\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

@@ -18,7 +18,7 @@ namespace ContractManager.Controllers
         // GET: ContractHours
         public async Task<ActionResult> Index()
         {
-            var contractHours = db.ContractHours.Include(c => c.ContractDetails).Include(c => c.Property);
+            var contractHours = db.ContractHours.Include(c => c.ContractDetail).Include(c => c.Property);
             return View(await contractHours.ToListAsync());
         }
 

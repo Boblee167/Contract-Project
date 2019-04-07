@@ -16,7 +16,7 @@ namespace ContractManager.Models
         [ForeignKey("Property")]
         public int Property_ID { get; set; }
 
-        [ForeignKey("ContractDetails")]
+        [ForeignKey("ContractDetail")]
         public int Contract_ID { get; set; }
 
         [Required]
@@ -34,7 +34,7 @@ namespace ContractManager.Models
 
         // Navigation Properties
         public virtual Property Property { get; set; }
-        public virtual ContractDetail ContractDetails { get; set; }
+        public virtual ContractDetail ContractDetail { get; set; }
     }
 
     
