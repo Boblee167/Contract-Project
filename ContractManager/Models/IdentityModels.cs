@@ -25,7 +25,6 @@ namespace ContractManager.Models
         public DbSet<ContractDetail> ContractDetails { get; set; }
         public DbSet<ContractHour> ContractHours { get; set; }
 
-
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
